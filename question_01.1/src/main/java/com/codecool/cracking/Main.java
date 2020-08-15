@@ -44,6 +44,7 @@ public class Main {
         return true;
     }
 
+    // Solution with sorting string first - takes less time, like O(n log n)
     private boolean isAllUniqueWithSort(String inputString) {
         if (inputString.length() > 128) return false;
 
