@@ -40,7 +40,7 @@ public class Main {
 
         for (int i = 0; i < inputString.length(); i++) {
             for (int j = i + 1; j < inputString.length(); j++) {
-                if (inputString.substring(i, i+1).equals(inputString.substring(j, j+1))) {
+                if (inputString.charAt(i) == (inputString.charAt(j))) {
                     return false;
                 }
             }
@@ -54,7 +54,7 @@ public class Main {
 
         String sortedString = sortString(inputString);
         for (int i = 0; i < inputString.length()-1; i++) {
-            if (sortedString.substring(i, i+1).equals(sortedString.substring(i+1, i+2))) return false;
+            if (sortedString.charAt(i) == (sortedString.charAt(i+1))) return false;
         }
 
         return true;
