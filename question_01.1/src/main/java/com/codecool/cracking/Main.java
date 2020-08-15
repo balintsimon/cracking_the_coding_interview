@@ -16,6 +16,8 @@ package com.codecool.cracking;
  */
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
 
@@ -28,6 +30,8 @@ public class Main {
         System.out.println(main.isAllUniqueCharsBruteForce(passingString));
         System.out.println(main.isAllUniqueWithSort(firstString));
         System.out.println(main.isAllUniqueWithSort(passingString));
+        System.out.println(main.isAllUniqueChars(firstString));
+        System.out.println(main.isAllUniqueChars(passingString));
     }
 
     // Brute force solution - compares every character to rest of the string (no additional data structure, though).
@@ -62,4 +66,21 @@ public class Main {
         return new String(tempArray);
     }
 
+    // Solution to use hashmap - aim is always to use a map, as it has O(1) access time and has to iterate
+    // over list only once (O(n) time). It uses "additional data structure" though...
+    private boolean isAllUniqueChars(String inputString) {
+        if (inputString.length() > 128) return false;
+
+        Map<Character, Boolean> characters = new HashMap<>();
+
+        for (int i = 0; i < inputString.length(); i++) {
+            char currentChar = inputString.charAt(i);
+            if (characters.get(currentChar) != null) {
+                return false;
+            }
+            characters.put(currentChar, true);
+        }
+
+        return true;
+    }
 }
