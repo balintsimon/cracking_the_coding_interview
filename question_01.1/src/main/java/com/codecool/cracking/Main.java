@@ -66,8 +66,12 @@ public class Main {
         return new String(tempArray);
     }
 
-    // Solution to use hashmap - aim is always to use a map, as it has O(1) access time and has to iterate
-    // over list only once (O(n) time). It uses "additional data structure" though...
+    /* Solution to use hashmap - aim is always to use a map, as it has O(1) access time and has to iterate
+      over list only once (O(n) time). It uses "additional data structure" though...
+
+      Additional note: map is not necessary to use here. Could also convert char to ASCII value and
+      use its value as index.
+    */
     private boolean isAllUniqueChars(String inputString) {
         if (inputString.length() > 128) return false;
 
