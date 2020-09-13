@@ -38,9 +38,26 @@ public class StreamTryout {
                 .collect(Collectors.toList());
     }
 
+    public static int diagonalDifference(List<List<Integer>> arr) {
+        int maxSize = arr.size();
+        int firstDiagSum = 0;
+        int secondDiagSum = 0;
+        for (int position = 0; position < maxSize; position++) {
+            firstDiagSum += arr.get(position).get(position);
+            secondDiagSum += arr.get(maxSize - position - 1).get(position);
+        }
+
+        return Math.abs(firstDiagSum - secondDiagSum);
+    }
+
+    public static String[] split(final String joint) {
+        if (joint.length() == 0) return new String[] {""};
+        return joint.split("\\.");
+    }
+
     public static void main(String[] args) {
         StreamTryout streamTryout = new StreamTryout();
-        int[] numbers = new int[] {1, 3, 5, 6, 11, 125, 2};
+        int[] numbers = new int[]{1, 3, 5, 6, 11, 125, 2};
         int[] squares = streamTryout.squareDigits(numbers);
         Arrays.stream(squares).forEach(i -> System.out.println(i));
 
