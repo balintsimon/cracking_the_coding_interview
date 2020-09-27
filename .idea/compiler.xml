@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="question_01.1" />
         <module name="question_03.1" />
+        <module name="question_06.1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="question_01.1" target="1.11" />
       <module name="question_03.1" target="1.5" />
+      <module name="question_06.1" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
