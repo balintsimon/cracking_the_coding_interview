@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="question_01.1" />
+        <module name="question_06.3" />
         <module name="question_03.1" />
         <module name="question_06.1" />
       </profile>
@@ -15,6 +16,7 @@
       <module name="question_01.1" target="1.11" />
       <module name="question_03.1" target="1.5" />
       <module name="question_06.1" target="11" />
+      <module name="question_06.3" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
