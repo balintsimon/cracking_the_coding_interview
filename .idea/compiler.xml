@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="question_01.1" />
+        <module name="question_16.2" />
         <module name="question_03.1" />
-        <module name="question_06.1" />
+        <module name="question_01.1" />
         <module name="question_16.1" />
         <module name="question_08.1" />
+        <module name="question_06.1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,6 +21,7 @@
       <module name="question_06.3" target="1.5" />
       <module name="question_08.1" target="11" />
       <module name="question_16.1" target="11" />
+      <module name="question_16.2" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
