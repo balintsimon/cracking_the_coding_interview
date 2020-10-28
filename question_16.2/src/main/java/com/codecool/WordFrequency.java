@@ -10,6 +10,7 @@ package com.codecool;
 
 public class WordFrequency {
     public int getWordFrequencyOnce(String[] book, String wordToFind) {
+        if (book == null || wordToFind == null) return -1;
         int count = 0;
 
         wordToFind = wordToFind.trim().toLowerCase();
